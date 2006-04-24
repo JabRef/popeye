@@ -1,0 +1,61 @@
+0.54
+----
+
+2006-04-04 R.Nagel <kiar@users.sourceforge.net>
+        * new build.properties entries, used for new.xml
+        * reworked TVersionCheckDialog
+        * new translationtable-menu (right click popup) features:
+          - copy cell content
+          - fill empty fields of the selected entry with content of the clicked
+            entry
+        * don't deliver the java source files at the "binary" jar
+        * fixed bug - handling of \\\ sequences failed
+        * fixed bug - endless search loop, if the pattern could not be found
+
+
+0.53
+----
+
+2006-03-20 R.Nagel <kiar@users.sourceforge.net>
+        * fix problems with iso to country resolving
+        * expand the options tree by default
+        * add/edit languages
+        * fixed bug - unable to start popeye with enabled "show flags" option
+
+2006-02-28 R.Nagel <kiar@users.sourceforge.net>
+        * make the "validation wizard" public
+        * change the workflow of the "new project wizard"
+        * some encoding stuff
+        * fixed bug - make the encoding options in the "save as" dialog visible
+        * fixed bug - empty list entry (default entry) at "save single" dialog
+
+v0.52
+-----
+
+2006-02-20  R.Nagel <kiar@users.sourceforge.net>
+        * project reload action
+        * disable simple themes for java 1.5
+          (problems with the default 1.5 ocean and the default 1.4 steel theme)
+        * font selection for the language components
+        * help system
+        * fixed bug - saving of empty lines produce a "key=key" entry
+        * fixed bug - finish button does not work in new project wizard
+        * fixed bug - remove leading spaces from keys -> handling inserted
+        * fixed bug - blank lines = comments
+        * fixed bug - small "save single" dialog with java 1.5
+
+v0.51
+-----
+
+2006-01-17  R.Nagel <kiar@users.sourceforge.net>
+        * encoding option in "save as" dialog
+
+2006-01-03  Zbigniew Ogledzki  <zgibek@users.sourceforge.net>
+        * done RFE #1379936 - Restoring newlines in oryginal files
+
+2006-01-02  Zbigniew Ogledzki  <zgibek@users.sourceforge.net>
+        * done RFE #1380805 - saving files with non-encoding - new option in project properties.
+
+2005-12-13  Zbigniew Ogledzki  <zgibek@users.sourceforge.net>
+        * fixed bug #1379907 - Duplicating newlines on save
+

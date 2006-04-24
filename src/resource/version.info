@@ -1,0 +1,4 @@
+builddate=April 24 2006
+build=490
+version=0.54
+meta=bugfix release, 1 critical bug (false "\" handling)

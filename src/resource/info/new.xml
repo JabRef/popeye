@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!--
+  ! whitespaces
+-->
+<info>
+  <newwizard hello="5">
+    <site1>
+Enter a name for your project and the path to the directory where it is to be
+saved. Normally, the working directory is the root for all project and language files.
+    </site1>
+    <site2>
+If a reference (language) file is specified, the wizard can collect some other language
+files, automatically. Additionally you can insert (already existing) language files, edit
+some settings or remove unused files.
+    </site2>
+  </newwizard>
+  <codeinsight>
+    <site1>
+The Codeinsight feature parse a set of source files and can extract
+the translation-keys from it. Please enter the path of the sources and choose
+a source parser (every parser has specific properties).
+    </site1>
+  </codeinsight>
+  <options>
+    <defaultProject>
+These settings are the default values for every new project. You can change the
+project settings at the project properties dialog.
+    </defaultProject>
+    <font>
+Here you can define your preferred font for the language components (e.g.
+the table). Attention, many fonts can't represent all characters of all
+languages correctly. At the "supported languages" box are examples of
+different supported classes of languages (only non-latin and incomplete).
+    </font>
+  </options>
+  <newlanguage>
+    <site1>
+Please insert the ISO 639 two-character code for the language. Additional you can specify the
+iso code for a country and/or a variant.If you press the '?' key, a simple dialog is opened,
+which can help to select the correct iso code.
+    </site1>
+    <site2>
+Here you can make some file settings, like the the encoding. It is nessesary for the right
+interpretation of the single characters of the file content. The "java utf" encoding is the
+standard encoding, it is a combination of ISO 8859-1 character encoding and java escape
+sequences like \u0045.
+    </site2>
+    <warning1>
+Warning! The encoding option will be ignored until the WYSIWYG option is enabled.
+    </warning1>
+  </newlanguage>
+  <savelanguage>
+    <head>
+Please choose one or more languages for saving.
+    </head>
+  </savelanguage>
+
+  <checkversion title="Check for a new Version">
+    <summary>
+This dialog examines whether a newer version of @APPLICATION_NAME@ is present on the @PROJECT_HOST@ server.
+    </summary>
+  </checkversion>
+
+  <validations title="Validation Wizard">
+    <summary>
+This wizard can perform some simple checks.
+    </summary>
+  </validations>
+
+</info>

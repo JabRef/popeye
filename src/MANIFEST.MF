@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.8.4
+Created-By: 1.7.0_05-b05 (Oracle Corporation)
+Main-Class: net.sf.langproper.Starter
+
+Name: common
+Specification-Title: popeye osi
+Specification-Version: 0.54
+Specification-Vendor: vendor
+Implementation-Title: Popeye
+Implementation-Version: 0.54 October 30 2012
+Implementation-Vendor: vendor
+

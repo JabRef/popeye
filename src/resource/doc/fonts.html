@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+ <meta content="text/html; charset=ISO-8859-1" 
+ http-equiv="content-type">
+ <title>Fonts</title>
+</head>
+
+<body>
+<H4>Fonts</H4>
+<P>
+You can use your own font for displaying the translations.
+These fonts are installed in the J2SE Runtime Environment's
+<CODE>lib/fonts</CODE> directory. Unfortunately the Fonts or Fontfamiles
+doesn't support all languages, mostly the basic-latin charset is supported
+only.<br> 
+Our default Fontfamily is <CODE>"Lucida"</CODE>, which provides a lot
+of charsets.
+</P>
+<br>
+
+<H5><B><A NAME="lucida"></A>The Lucida Fonts</B></H5>
+
+<P>Sun's J2SE Development Kit and J2SE Runtime Environments bundle
+several physical fonts of the "Lucida" design family. These fonts are
+also licensed for use in other implementations of the Java 2
+platform. These fonts are physical fonts, but since they come with
+the Java 2 runtime, they don't depend on the host operating system.
+Using them provides the benefit of a consistent look and feel across
+platforms and implementations for a large set of languages.</P>
+
+<P>There are three different type families: <CODE>"Lucida
+Sans"</CODE>, <CODE>"Lucida Sans Typewriter"</CODE>, and<CODE>
+"Lucida Bright"</CODE>. Each family has plain, bold, italic, and
+bold-italic styles. Not all of these are present in all Java 2
+implementations. For example, the default download bundle of Sun's
+J2SE Runtime Environment for Windows only contains the Lucida Sans
+plain font (but note that application developers can include all
+Lucida fonts with a JRE that they redistribute with an application).
+</P>
+
+<P>The following table shows which Unicode character blocks are
+covered by each font family:</P>
+
+<P><TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2
+summary="Unicode 3.0 character blocks">
+   <TR>
+      <TH WIDTH="40%">
+         <P ALIGN=LEFT>Unicode Block
+      </TH><TH WIDTH="20%">
+
+         <P ALIGN=LEFT>Lucida Sans
+      </TH><TH WIDTH="20%">
+         <P ALIGN=LEFT>Lucida Sans Typewriter
+      </TH><TH WIDTH="20%">
+         <P ALIGN=LEFT>Lucida Bright
+      </TH></TR>
+   <TR>
+      <TD WIDTH="40%">
+         <P>Basic Latin
+      </TD><TD WIDTH="20%">
+         <P>yes
+      </TD><TD WIDTH="20%">
+
+         <P>yes
+      </TD><TD WIDTH="20%">
+         <P>yes
+      </TD></TR>
+   <TR>
+      <TD WIDTH="40%">
+         <P>Latin-1 Supplement
+      </TD><TD WIDTH="20%">
+         <P>yes
+      </TD><TD WIDTH="20%">
+         <P>yes
+      </TD><TD WIDTH="20%">
+
+         <P>yes
+      </TD></TR>
+   <TR>
+      <TD WIDTH="40%">
+         <P>Latin Extended-A
+      </TD><TD WIDTH="20%">
+         <P>yes
+      </TD><TD WIDTH="20%">
+         <P>yes
+      </TD><TD WIDTH="20%">
+         <P>yes
+      </TD></TR>
+
+   <TR>
+      <TD WIDTH="40%">
+         <P>Latin Extended-B
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD></TR>
+   <TR>
+
+      <TD WIDTH="40%">
+         <P>IPA Extensions
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>no
+      </TD><TD WIDTH="20%">
+         <P>no
+      </TD></TR>
+   <TR>
+      <TD WIDTH="40%">
+
+         <P>Spacing Modifier Letter
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD></TR>
+   <TR>
+      <TD WIDTH="40%">
+         <P>Combining Diacritical Marks
+      </TD><TD WIDTH="20%">
+
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>no
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD></TR>
+   <TR>
+      <TD WIDTH="40%">
+         <P>Greek
+      </TD><TD WIDTH="20%">
+         <P>yes
+      </TD><TD WIDTH="20%">
+
+         <P>yes
+      </TD><TD WIDTH="20%">
+         <P>yes
+      </TD></TR>
+   <TR>
+      <TD WIDTH="40%">
+         <P>Cyrillic
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+
+         <P>partial
+      </TD></TR>
+   <TR>
+      <TD WIDTH="40%">
+         <P>Hebrew
+      </TD><TD WIDTH="20%">
+         <P>yes
+      </TD><TD WIDTH="20%">
+         <P>yes
+      </TD><TD WIDTH="20%">
+         <P>no
+      </TD></TR>
+
+   <TR>
+      <TD WIDTH="40%">
+         <P>Arabic
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD></TR>
+   <TR>
+
+      <TD WIDTH="40%">
+         <P>Devanagari
+      </TD><TD WIDTH="20%">
+         <P>yes
+      </TD><TD WIDTH="20%">
+         <P>no
+      </TD><TD WIDTH="20%">
+         <P>no
+      </TD></TR>
+   <TR>
+      <TD WIDTH="40%">
+
+         <P>Thai
+      </TD><TD WIDTH="20%">
+         <P>yes
+      </TD><TD WIDTH="20%">
+         <P>yes
+      </TD><TD WIDTH="20%">
+         <P>no
+      </TD></TR>
+   <TR>
+      <TD WIDTH="40%">
+         <P>General Punctuation
+      </TD><TD WIDTH="20%">
+
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD></TR>
+   <TR>
+      <TD WIDTH="40%">
+         <P>Superscripts and Subscripts
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD></TR>
+   <TR>
+      <TD WIDTH="40%">
+         <P>Currency Symbols
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+
+         <P>partial
+      </TD></TR>
+   <TR>
+      <TD WIDTH="40%">
+         <P>Letterlike Symbols
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD></TR>
+
+   <TR>
+      <TD WIDTH="40%">
+         <P>Number Forms
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>no
+      </TD></TR>
+   <TR>
+
+      <TD WIDTH="40%">
+         <P>Arrows
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD></TR>
+   <TR>
+      <TD WIDTH="40%">
+
+         <P>Mathematical Operators
+      </TD><TD WIDTH="20%">
+         <P>yes
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>yes
+      </TD></TR>
+   <TR>
+      <TD WIDTH="40%">
+         <P>Enclosed Alphanumerics
+      </TD><TD WIDTH="20%">
+
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>no
+      </TD><TD WIDTH="20%">
+         <P>no
+      </TD></TR>
+   <TR>
+      <TD WIDTH="40%">
+         <P>Box Drawings
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>no
+      </TD></TR>
+   <TR>
+      <TD WIDTH="40%">
+         <P>Block Elements
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+
+         <P>no
+      </TD></TR>
+   <TR>
+      <TD WIDTH="40%">
+         <P>Geometric Shapes
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD></TR>
+
+   <TR>
+      <TD WIDTH="40%">
+         <P>Miscellaneous Symbols
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>no
+      </TD></TR>
+   <TR>
+
+      <TD WIDTH="40%">
+         <P>Dingbats
+      </TD><TD WIDTH="20%">
+         <P>yes
+      </TD><TD WIDTH="20%">
+         <P>no
+      </TD><TD WIDTH="20%">
+         <P>no
+      </TD></TR>
+   <TR>
+      <TD WIDTH="40%">
+
+         <P>Alphabetic Presentation Forms
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>no
+      </TD></TR>
+   <TR>
+      <TD WIDTH="40%">
+         <P>Arabic Presentation Forms-A
+      </TD><TD WIDTH="20%">
+
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD><TD WIDTH="20%">
+         <P>partial
+      </TD></TR>
+   <TR>
+      <TD WIDTH="40%">
+         <P>Arabic Presentation Forms-B
+      </TD><TD WIDTH="20%">
+         <P>yes
+      </TD><TD WIDTH="20%">
+
+         <P>yes
+      </TD><TD WIDTH="20%">
+         <P>yes
+      </TD></TR>
+</TABLE></P>
+
+<P>By Sun's J2SE Runtime Environments, the Lucida fonts do not support Chinese
+(Simplified), Chinese (Traditional), Japanese, and Korean.</P>
+
+</body></html>

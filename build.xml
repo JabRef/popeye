@@ -1,0 +1,187 @@
+<project name="langproper" default="dist" basedir=".">
+  <description>
+      Popeye - a java properties file editor especially for language bundles
+  </description>
+
+  <!-- set global properties for this build -->
+  <property name="srcname" value="src"/>
+  <property name="src" location="${srcname}"/>
+  <property name="build" location="classes/classes.ant"/>
+  <property name="dist" location="dist"/>
+  <property name="doc" location="doc"/>
+  <property name="tmp" location="classes/tmp"/>
+  <property name="version.file" value="version.info"/>
+
+  <!-- load some definitions -->
+  <property file="build.properties"/>
+
+  <!-- some placeholder -->
+  <property name="popeye.placeholder.version" value="@version@" /> <!-- used by replace task -->
+  <property name="popeye.placeholder.appname" value="@APPLICATION_NAME@" /> <!-- used by replace task -->
+  <property name="popeye.placeholder.host" value="@PROJECT_HOST@" /> <!-- used by replace task -->
+  <property name="popeye.placeholder.server.url" value="@PROJECT_URL@" /> <!-- used by replace task -->
+
+
+  <!-- update the CLASSPATH -->
+  <path id="project.class.path">
+    <pathelement path="${java.class.path}"/>
+  </path>
+
+  <!-- ======================================================================= -->
+
+  <target name="init">
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Create the build directory structure used by compile -->
+    <mkdir dir="${build}"/>
+  </target>
+
+  <!-- ======================================================================= -->
+
+  <target name="compile" depends="init" description="compile the source">
+
+    <!-- dependences - delete old class files  -->
+    <depend srcdir="${src}" destdir="${build}" cache="${build}/depcache" closure="yes"/>
+
+    <!-- compile the source -->
+    <javac deprecation="on" optimize="on" debug="on" srcdir="${src}" destdir="${build}">
+      <classpath refid="project.class.path"/>
+    </javac>
+
+    <!-- debuglevel="lines, vars, source" -->
+    <!--
+      <copy todir="${build}/images">
+      <fileset dir="${src}/images"/>
+      </copy>
+    -->
+
+    <!-- generate and save some build infos-->
+    <buildnumber/>
+    <echo message="build number = ${build.number}"/>
+    <echo file="${src}/resource/${version.file}">builddate=${TODAY}
+build=${build.number}
+version=${project.version}
+meta=${project.version.meta}</echo>
+
+    <!-- copy all resource files into the build area -->
+    <copy todir="${build}/resource">
+      <fileset dir="${src}/resource"/>
+    </copy>
+  </target>
+
+  <!-- ======================================================================= -->
+
+  <target name="dist" depends="compile"
+          description="generate the distribution without any source">
+
+    <!-- Create the distribution directory -->
+    <mkdir dir="${dist}"/>
+
+    <!-- Create or Update a manifest file with distribution infos -->
+    <manifest file="${src}/MANIFEST.MF">
+<!--      <attribute name="Built-By" value="${user.name}"/> -->
+      <attribute name="Main-Class" value="${project.mainclass}"/>
+      <section name="common">
+        <attribute name="Specification-Title" value="${project.spec.title}"/>
+        <attribute name="Specification-Version" value="${project.version}"/>
+        <attribute name="Specification-Vendor" value="${project.spec.vendor}"/>
+        <attribute name="Implementation-Title" value="${project.imp.title}"/>
+        <attribute name="Implementation-Version" value="${project.version} ${TODAY}"/>
+        <attribute name="Implementation-Vendor" value="${project.imp.vendor}"/>
+      </section>
+    </manifest>
+
+    <!-- copy some necessary files (README, LICENSE), exclude the source files -->
+    <copy todir="${build}">
+      <fileset dir="${src}">
+        <exclude name="MANIFEST.MF"/>
+	<exclude name="manifest.mf"/>
+	<exclude name="**/*.java"/>
+	<exclude name="**/*.jj"/>
+      </fileset>
+    </copy>
+
+     <!-- Insert version informations -->
+     <replace dir="${build}"
+              token="${popeye.placeholder.version}"
+              value="${project.version}">
+         <include name="**/readme.txt"/>
+	 <include name="**/*.html"/>
+      </replace>
+
+     <replace dir="${build}"
+              token="${popeye.placeholder.appname}"
+              value="${project.imp.title}">
+         <include name="**/new.xml"/>
+      </replace>
+
+     <replace dir="${build}"
+              token="${popeye.placeholder.host}"
+              value="${project.imp.host}">
+         <include name="**/new.xml"/>
+      </replace>
+      
+    <!-- the "up to date" version -->
+    <jar jarfile="${dist}/${ant.project.name}-${project.shortversion}.jar" manifest="${src}/MANIFEST.MF">
+      <fileset dir="${build}">
+        <exclude name="**/depcache/**"/>
+      </fileset>
+    </jar>
+
+    <!-- extra version info into the dist directory -->
+    <copy file="${src}/resource/${version.file}" todir="${dist}"/>
+
+  </target>
+
+  <!-- ======================================================================= -->
+
+  <target name="sourcedist"
+          description="generate the distribution without any source">
+
+    <!-- copy all source files -->
+    <copy todir="${tmp}/${srcname}">
+      <fileset dir="${src}">
+        <exclude name="**/MANIFEST.MF"/>
+	<exclude name="**/manifest.mf"/>
+      </fileset>
+    </copy>
+
+    <!-- copy ant build files -->
+    <copy file="build.xml" todir="${tmp}"/>
+    <copy file="build.properties" todir="${tmp}"/>
+    <copy file="ChangeLog" todir="${tmp}"/>
+
+    <!-- create source jar -->
+    <jar jarfile="${dist}/${ant.project.name}-${project.shortversion}-source.jar">
+      <fileset dir="${tmp}"/>
+    </jar>
+
+    <!-- delete tmp directory -->
+    <delete dir="${tmp}"/>
+
+  </target>
+
+  <!-- ======================================================================= -->
+
+  <target name="clean" description="clean up">
+
+    <!-- Delete the ${build} and ${dist} directory trees -->
+    <delete dir="${build}"/>
+    <delete dir="${dist}"/>
+  </target>
+
+  <!-- ======================================================================= -->
+    <target name="full" depends="clean, dist, sourcedist"
+         description="complete distribution"/>
+  <!-- ======================================================================= -->
+
+  <target name="doc" description="generate class documentation">
+    <javadoc packagenames="${ant.project.name}.*"
+             sourcepath="${src}"
+             defaultexcludes="yes"
+             destdir="${doc}"
+             author="true" version="true" use="true" private="true"
+             windowtitle="${ant.project.name} API">
+    </javadoc>
+  </target>
+</project>
