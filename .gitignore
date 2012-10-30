@@ -1,0 +1,5 @@
+bin/
+classes/
+dist/
+src/resource/version.info
+build.number
