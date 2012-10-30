@@ -246,6 +246,9 @@ public class JavaBundleData extends TProjectData
           if ( buf.length() > 0 && buf.charAt(0) != '#' ) // a REAL line, not a comment
           {
             trenner = buf.indexOf( '=' ) ;
+            while ((trenner > 1) && (buf.charAt(trenner-1) == '\\')) {
+            	trenner = buf.indexOf('=', trenner+1);
+            }
 
             if ( ( trenner == -1 ) || ( trenner == 0 ) ) // no =
             {

@@ -1,3 +1,9 @@
+0.55
+----
+
+2012-10-31 O. Kopp <olly98@users.sf.net>
+        * fixed bug - handling of \" at key failed
+
 0.54
 ----
 
