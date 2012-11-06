@@ -1,4 +1,4 @@
 builddate=November 6 2012
 build=0
 version=0.55
-meta=bugfix release, 1 critical bug (false "=" handling)
+meta=bugfix release, 1 critical bug (false "\=" handling)
