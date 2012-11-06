@@ -5,9 +5,9 @@ Main-Class: net.sf.langproper.Starter
 
 Name: common
 Specification-Title: popeye osi
-Specification-Version: 0.54
+Specification-Version: 0.55
 Specification-Vendor: vendor
 Implementation-Title: Popeye
-Implementation-Version: 0.54 October 30 2012
+Implementation-Version: 0.55 November 6 2012
 Implementation-Vendor: vendor
 

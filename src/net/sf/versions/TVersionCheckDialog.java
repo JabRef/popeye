@@ -176,7 +176,7 @@ public class TVersionCheckDialog
       closeButton.setEnabled( false ) ;
       ConnectionThread thr = new ConnectionThread() ;
       messageTextArea.setText( "" ) ;
-      messageTextArea.append( "try to connect sourceforge.net..." ) ;
+      messageTextArea.append( "try to connect " + TGlobal.PROJECT_HOST + "..." ) ;
       thr.start() ;
     }
     else if ( sender == closeButton ) // close dialog

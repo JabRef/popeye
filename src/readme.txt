@@ -61,6 +61,9 @@ for a complete list.
  [nf] = new feature
 
 --------------------------------------------------------------------------------
+  0.55   - bugfix: false "\=" handling
+         - transition to github (https://github.com/koppor/popeye)
+
   0.54   - new translationtable-menu features (right click popup)
          - bugfixes
 

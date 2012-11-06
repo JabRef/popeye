@@ -64,8 +64,8 @@ public class TGlobal
   public static final String LOGGER_PROPS_FILENAME = "logger.properties" ;
 
 //  public static final String SERVER_LAST_VERSION_URL = "http://popeye.sourceforge.net/downloads/version.info" ;
-  public static final String SERVER_LAST_VERSION_URL =
-      "http://popeye.sourceforge.net/version.php" ;
+//  public static final String SERVER_LAST_VERSION_URL = "http://popeye.sourceforge.net/version.php" ;
+  public static final String SERVER_LAST_VERSION_URL = "http://koppor.github.com/popeye/version.info" ;
 
   public static final String DEFAULT_LOAD_PATH = "./" ;
 
@@ -76,8 +76,8 @@ public class TGlobal
   public static final String INFO_COMMENT_TEXT = "#! created/edited by " ;
 
   // home of popeye
-  public static final String PROJECT_MAIN_URL = "popeye.sourceforge.net" ;
-  public static final String PROJECT_HOST = "sourceforge" ;
+  public static final String PROJECT_MAIN_URL = "https://github.com/koppor/popeye" ;
+  public static final String PROJECT_HOST = "github" ;
 
   public static final String PROJECT_FILE_EXTENSION = "ppf" ; // Popeye Project File
   public static final String PROJECT_FILE_EXTENSION_DESC = "project file" ; // Popeye Project File

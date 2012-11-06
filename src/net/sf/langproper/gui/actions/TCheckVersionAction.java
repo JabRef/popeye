@@ -49,7 +49,7 @@ public class TCheckVersionAction extends TAbstractGUIAction
   public TCheckVersionAction()
   {
     super( "Check Version",
-           "get the latest version information from "+ TGlobal.PROJECT_MAIN_URL ) ;
+           "get the latest version information from "+ TGlobal.SERVER_LAST_VERSION_URL ) ;
   }
 
   /**
